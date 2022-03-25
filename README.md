@@ -135,9 +135,9 @@ Tasa de cambio de los tiempos: 1.2417
 Tasa de cambio de la funcion n^2: 1.23457
 
 ## Influencia del pivote fijo y aleatorio:
-Como ya se mencionó anteriormente el usar un pivote fijo puede causar crecienmientos caudráticos en ciertas
+Como ya se mencionó anteriormente el usar un pivote fijo puede causar crecimientos cuadráticos en ciertas
 circunstancias, usando el ejemplo anterior donde se llenan los arreglos con numeros ordenados de mayor a menor
-el algoritmo tiene un creciemnto cuadratico. Sin embargo, si en cada subllamda a quicksort calculamos un nuevo pivote de forma
+el algoritmo tiene un creciemnto cuadratico. Sin embargo, si en cada subllamada a quicksort calculamos un nuevo pivote de forma
 aleatoria, podemos reducir el tiempo de ejecucion considerablemente.
 
 En los siguientes resultados, se comparó el el crecimiento usando el pivote aleatorio y la funcion n*(log(n))
@@ -203,3 +203,162 @@ Tasa de cambio de la funcion n*log(n): 1.12306
 
 
 ## Insertionsort lineal:
+El mejor caso del insertionsort es O(n) y ocurre cuando la lista ya está ordenada, por lo que creé 10 arreglos
+de los siguientes tamaños: {1000000,2000000,3000000,4000000,5000000,6000000,7000000,8000000,9000000,10000000} y 
+los llené con números ordenados de forma ascendente, luego corrí las pruebas obteniendo los siguientes resultados:
+
+
+Arreglo: 0
+Cantidad de elementos: 1000000     
+Tiempo de ejecucion: 3 milisegundos
+
+Arreglo: 1
+Cantidad de elementos: 2000000     
+Tiempo de ejecucion: 9 milisegundos
+Tasa de cambio de los tiempos: 3   
+Tasa de cambio de la funcion n : 2 
+
+Arreglo: 2
+Cantidad de elementos: 3000000      
+Tiempo de ejecucion: 13 milisegundos
+Tasa de cambio de los tiempos: 1.44444
+Tasa de cambio de la funcion n : 1.5
+
+Arreglo: 3
+Cantidad de elementos: 4000000
+Tiempo de ejecucion: 18 milisegundos
+Tasa de cambio de los tiempos: 1.38462
+Tasa de cambio de la funcion n : 1.33333
+
+Arreglo: 4
+Cantidad de elementos: 5000000
+Tiempo de ejecucion: 27 milisegundos
+Tasa de cambio de los tiempos: 1.5
+Tasa de cambio de la funcion n : 1.25
+
+Arreglo: 5
+Cantidad de elementos: 6000000
+Tiempo de ejecucion: 23 milisegundos
+Tasa de cambio de los tiempos: 0.851852
+Tasa de cambio de la funcion n : 1.2
+
+Arreglo: 6
+Cantidad de elementos: 7000000
+Tiempo de ejecucion: 27 milisegundos
+Tasa de cambio de los tiempos: 1.17391
+Tasa de cambio de la funcion n : 1.16667
+
+Arreglo: 7
+Cantidad de elementos: 8000000
+Tiempo de ejecucion: 31 milisegundos
+Tasa de cambio de los tiempos: 1.14815
+Tasa de cambio de la funcion n : 1.14286
+
+Arreglo: 8
+Cantidad de elementos: 9000000
+Tiempo de ejecucion: 32 milisegundos
+Tasa de cambio de los tiempos: 1.03226
+Tasa de cambio de la funcion n : 1.125
+
+Arreglo: 9
+Cantidad de elementos: 10000000
+Tiempo de ejecucion: 40 milisegundos
+Tasa de cambio de los tiempos: 1.25
+Tasa de cambio de la funcion n : 1.11111
+
+## Insertionsort cuadrático:
+El peor caso del insertionsort es O(n^2) y ocurre cuando la lista está ordenada de forma descendente, por lo que creé 10 arreglos
+de los siguientes tamaños: {2000,4000,6000,8000,10000,12000,14000,16000,18000,20000} y 
+los llené con números ordenados de forma inversa, luego corrí las pruebas obteniendo los siguientes resultados:
+
+Arreglo: 0
+Cantidad de elementos: 2000        
+Tiempo de ejecucion: 6 milisegundos
+
+Arreglo: 1
+Cantidad de elementos: 4000
+Tiempo de ejecucion: 22 milisegundos  
+Tasa de cambio de los tiempos: 3.66667
+Tasa de cambio de la funcion n^2 : 4  
+
+Arreglo: 2
+Cantidad de elementos: 6000
+Tiempo de ejecucion: 47 milisegundos  
+Tasa de cambio de los tiempos: 2.13636
+Tasa de cambio de la funcion n^2 : 2.25
+
+Arreglo: 3
+Cantidad de elementos: 8000
+Tiempo de ejecucion: 83 milisegundos
+Tasa de cambio de los tiempos: 1.76596
+Tasa de cambio de la funcion n^2 : 1.77778
+
+Arreglo: 4
+Cantidad de elementos: 10000
+Tiempo de ejecucion: 124 milisegundos
+Tasa de cambio de los tiempos: 1.49398
+Tasa de cambio de la funcion n^2 : 1.5625
+
+Arreglo: 5
+Cantidad de elementos: 12000
+Tiempo de ejecucion: 186 milisegundos
+Tasa de cambio de los tiempos: 1.5
+Tasa de cambio de la funcion n^2 : 1.44
+
+Arreglo: 6
+Cantidad de elementos: 14000
+Tiempo de ejecucion: 266 milisegundos
+Tasa de cambio de los tiempos: 1.43011
+Tasa de cambio de la funcion n^2 : 1.36111
+
+Arreglo: 7
+Cantidad de elementos: 16000
+Tiempo de ejecucion: 334 milisegundos
+Tasa de cambio de los tiempos: 1.25564
+Tasa de cambio de la funcion n^2 : 1.30612
+
+Arreglo: 8
+Cantidad de elementos: 18000
+Tiempo de ejecucion: 454 milisegundos
+Tasa de cambio de los tiempos: 1.35928
+Tasa de cambio de la funcion n^2 : 1.26562
+
+Arreglo: 9
+Cantidad de elementos: 20000
+Tiempo de ejecucion: 518 milisegundos
+Tasa de cambio de los tiempos: 1.14097
+Tasa de cambio de la funcion n^2 : 1.23457
+
+
+## FreeText search:
+
+Para resolver este problema creé un bstree, en donde voy a insertar todas las palabras que encuentre en un archivo txt.
+Por lo que la complejidad de la bsuqueda va a ser O(n), donde n es la cantidad de palabras en el texto.
+Al realizar una consulta en el bstree va a durar lo mismo siempre y cuando no se hayan insertado palabras nuevas. 
+Ya que necesita visitar todos los nodos del arbol y comprobar si el substring es parte de la palabra que contiene el nodo. 
+
+Por esto, la complejidad del algoritmo va a depender de cuantas palabras hayamos insertado en el arbol.
+
+Pruebas:
+
+Usando el texto de Quijote.txt inserté un cuarto del texto en el arbol y busqué la palabra sancho
+comenté las impresiones internas para medir el algoritmo y obtuve un tiempo de ejecucion de: 
+
+Total de aparcicones de sancho: 365
+Tiempo de busqueda: 1.87 milisegundos
+
+
+Luego lo repetí pero con la mitad del texto, obtuviendo:
+
+Total de aparcicones de sancho: 901
+Tiempo de busqueda: 3.2 milisegundos
+
+
+Por último con el texto entero:
+
+Total de aparcicones de sancho: 2150
+Tiempo de busqueda: 7 milisegundos
+
+
+Para comprobar que el tiempo no cambia si la cantidad de palabras es la misma
+busqué  varias veces las siguientes palabras en el Quijote: rey, cal y perjuicio. Obtuviendo siempre de 2 a 5  milisegundos en las tres busquedas.
