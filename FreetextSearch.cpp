@@ -90,7 +90,7 @@ class TreeNode{
 
 };
 
-main(){
+int main(){
 
     int t0 = 0;
     int t1 = 0;
