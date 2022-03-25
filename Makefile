@@ -1,17 +1,20 @@
-output: Quicksort.o
-	g++ Quicksort.o -o quicksort
+output: Quicksort.o Insertionsort.o FreetextSearch.o
+	g++ Quicksort.o -o quicksort && g++ Insertionsort.o -o insertionsort && g++ FreetextSearch.o -o freetextsearch
 Quicksort.o: Quicksort.cpp
 	g++ -c Quicksort.cpp
 
-output: Insertionsort.o
-	g++ Insertionsort.o -o insertionsort
+
 Insertionsort.o: Insertionsort.cpp
 	g++ -c Insertionsort.cpp
 
-output: FreetextSearch.o
-	g++ Insertionsort.o -o freetextsearch
+
 FreetextSearch.o: FreetextSearch.cpp
 	g++ -c FreetextSearch.cpp
+
+
+clean:
+	rm *.o freetextsearch insertionsort quicksort
+
 
 
 
